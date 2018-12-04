@@ -39,30 +39,25 @@ def createUsableAttList(file,objectiveID):
 def deleteMetrics(metrics,tempDS):
 ```
 
-
 ```python
 #Create history for records
 def history(hourHistory,allDS):
 ```
-
 
 ```python
 #Create header for when using history
 def createHistoryHeader(hourHistory,allDS):
 ```
 
-
 ```python
 #Create array with all files of the main directory
 def getAllFiles():
 ```
 
-
 ```python
 #Get all CSV file locations in the main directory
 def getOnlyNames():
 ```
-
 
 ```python
 #Get only names of all the CSV files in the main directory
