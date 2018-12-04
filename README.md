@@ -19,6 +19,11 @@ The API comes with a different set of functions that lets the user models its da
 def dsConfig(maxGranularity,maxHourHistory,objectiveID):
 ```
 
+```python
+#Create multiple datasets with all possible configurations until max granularity and history with a range of specific future hours for objective class
+def dsCreatorFuture(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
+```
+
 
 #### Create single dataset
 ```python
@@ -27,8 +32,13 @@ def dsCreator(granularity,hourHistory,usableAttributes,norm,originalDataset,mont
 ```
 
 ```python
-#Creates a single dataset composed by N months
+#Create a single dataset composed by N months
 def addMonths(allDS,monthNumber):
+```
+
+```python
+#Create a single dataset composed by N months and a future hour for objective class
+def futureDS(allDS,futureTimeWindow,objectiveID,history):
 ```
 
 ```python
@@ -77,11 +87,26 @@ def getOnlyNames():
 def getFileNames():
 ```
 
+```python
+#Create a header for future objective class
+def createHistoryHeaderFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
+```
+
+```python
+#Create a record with specific history containing the future objective class
+def historyFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
+```
+
 #### Specific tasks
 
 ```python
 #Write a dastaset to a CSV file
 def writeCSV4(tempDataset,monthNum,norm,name):
+```
+
+```python
+#Write a dastaset with future objective class to a CSV file
+def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
 ```
 
 ```python
@@ -92,42 +117,20 @@ def readFromFile():
 #### File configuration methodologies
 
 ```python
-#Use configuration file for 
+#Use configuration to create sets of training and test sets
 def dsConfigFile(objectiveID,addMonthBool):
 ```
 
 ```python
-#Configure file for future
+#Use configuration to create sets of training and test sets with objective class of a specific hour
 def dsConfigFileFutureExactly(objectiveID,addMon,non_hour):
 ```
 
 ```python
-#
+##Use configuration to create sets of training and test sets with objective class consisting of a range of specific hours
 def dsConfigFileFutureCombinations(objectiveID,addMon,non_hour):
 ```
 
-```python
-#
-def dsCreatorFuture(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
-```
 
-```python
-#
-def createHistoryHeaderFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
-```
 
-```python
-#
-def historyFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
-```
-
-```python
-#
-def futureDS(allDS,futureTimeWindow,objectiveID,history):
-```
-
-```python
-#
-def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
-```
 
