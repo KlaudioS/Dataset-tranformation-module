@@ -19,6 +19,8 @@ The API comes with a different set of functions that lets the user models its da
 def dsConfig(maxGranularity,maxHourHistory,objectiveID):
 ```
 
+
+#### Create single dataset
 ```python
 #Create a single dataset with specific configuration
 def dsCreator(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name):
@@ -29,6 +31,17 @@ def dsCreator(granularity,hourHistory,usableAttributes,norm,originalDataset,mont
 def addMonths(allDS,monthNumber):
 ```
 
+```python
+#Tranform dataset into N granularity
+def granularityIndexer(tmpDS,granu):
+```
+
+```python
+#Normalize dataset using min max
+def normalization(allDS):
+```
+
+#### Configuration functions
 ```python
 #Set usable attributes in the dataset
 def createUsableAttList(file,objectiveID):
@@ -64,10 +77,7 @@ def getOnlyNames():
 def getFileNames():
 ```
 
-```python
-#Normalize dataset using min max
-def normalization(allDS):
-```
+#### Specific tasks
 
 ```python
 #Write a dastaset to a CSV file
@@ -75,14 +85,13 @@ def writeCSV4(tempDataset,monthNum,norm,name):
 ```
 
 ```python
-#Tranform dataset into N granularity
-def granularityIndexer(tmpDS,granu):
-```
-
-```python
 #Read dataset into memory
 def readFromFile():
 ```
+
+
+
+#### File configuration methodologies
 
 ```python
 #Use configuration file for 
@@ -124,4 +133,3 @@ def futureDS(allDS,futureTimeWindow,objectiveID,history):
 def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
 ```
 
-#### File configuration methodologies
