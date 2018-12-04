@@ -1,6 +1,6 @@
 # Dataset tranformation module API
 
-The WikiGather API appeared from the need to download large raw data quantities from the Wikimedia foundation, with a simple and efficient tool.  The API allows an easy integration in researchers python projects.
+The Dataset tranformation module API is a simple and efficient tool to add extra temporal information to time-series datasets, altough it still can be used in any numeric only datasets. The API allows an easy integration in researchers python projects.
 
 ##### Disclosure
 API stil under development
