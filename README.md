@@ -14,54 +14,116 @@ API stil under development
 The API comes with a different set of functions that lets you adjust your Wikipedia datasets to the users needs:
 
 ```python
-# Enconding function to resolve encoding issues
-def enconding():
+#Create multiple datasets with all possible configurations until max granularity and history
+def dsConfig(maxGranularity,maxHourHistory,objectiveID):
 ```
 
 ```python
-#Generate list of the dataset names stored online
-def get_URL():
+#Create a single dataset with specific configuration
+def dsCreator(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name):
 ```
 
 ```python
-# Create a Dataset with 9 attributes from the raw file,contains data from all languages 
-def create_ds():
+#Creates a single dataset composed by N months
+def addMonths(allDS,monthNumber):
 ```
 
 ```python
-# Create a Dataset with 8 attributes from the raw file, contains just data from the desired language	
-def create_ds_lang(desiredLang):
+#Set usable attributes in the dataset
+def createUsableAttList(file,objectiveID):
+```
+
+```python
+#Delete specific attirbutes
+def deleteMetrics(metrics,tempDS):
 ```
 
 
 ```python
-# Write a dataset out in CSV format		
-def write_CSV():
+#Create history for records
+def history(hourHistory,allDS):
+```
+
+
+```python
+#Create header for when using history
+def createHistoryHeader(hourHistory,allDS):
+```
+
+
+```python
+#Create array with all files of the main directory
+def getAllFiles():
+```
+
+
+```python
+#Get all CSV file locations in the main directory
+def getOnlyNames():
+```
+
+
+```python
+#Get only names of all the CSV files in the main directory
+def getFileNames():
 ```
 
 ```python
-# Calculate the average,standard deviaton for request and webpage size
-def calculate_all():
+#Normalize dataset using min max
+def normalization(allDS):
 ```
 
 ```python
-# Clear data from all variables, used when in need to restart a process
-def clearData():
-```
-
-#### 4 Hours functions
-
-```python
-# Create a dataset with 4 hours worth of data per record,contains data just from the defined language	
-def create_ds_4h(desiredLang):
+#Write a dastaset to a CSV file
+def writeCSV4(tempDataset,monthNum,norm,name):
 ```
 
 ```python
-# Write out a 4 hours record dataset in CSV format
-def write_CSV_4h():
+#Tranform dataset into N granularity
+def granularityIndexer(tmpDS,granu):
 ```
 
 ```python
-# Calculate the average,standard deviaton for request and webpage size
-def calculate_all_4h(desiredLang):
+#Read dataset into memory
+def readFromFile():
+```
+
+```python
+#Use configuration file for 
+def dsConfigFile(objectiveID,addMonthBool):
+```
+
+```python
+#Configure file for future
+def dsConfigFileFutureExactly(objectiveID,addMon,non_hour):
+```
+
+```python
+#
+def dsConfigFileFutureCombinations(objectiveID,addMon,non_hour):
+```
+
+```python
+#
+def dsCreatorFuture(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
+```
+
+```python
+#
+def createHistoryHeaderFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
+```
+
+```python
+#
+def historyFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
+```
+
+```python
+#
+def futureDS(allDS,futureTimeWindow,objectiveID,history):
+```
+
+```python
+#
+def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
 ```
