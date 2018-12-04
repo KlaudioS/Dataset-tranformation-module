@@ -11,7 +11,7 @@ API stil under development
 
 # API functions
 
-The API comes with a different set of functions that lets the user models its dataset to its needs:
+The API comes with a different set of functions that lets the user models its dataset to its needs.
 
 #### Grid search methodologies
 ```python
@@ -128,3 +128,5 @@ def futureDS(allDS,futureTimeWindow,objectiveID,history):
 #
 def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
 ```
+
+#### File configuration methodologies
