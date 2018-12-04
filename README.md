@@ -24,6 +24,23 @@ def dsConfig(maxGranularity,maxHourHistory,objectiveID):
 def dsCreatorFuture(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
 ```
 
+#### File configuration approach
+
+```python
+#Use configuration to create sets of training and test sets
+def dsConfigFile(objectiveID,addMonthBool):
+```
+
+```python
+#Use configuration to create sets of training and test sets with objective class of a specific hour
+def dsConfigFileFutureExactly(objectiveID,addMon,non_hour):
+```
+
+```python
+##Use configuration to create sets of training and test sets with objective class consisting of a range of specific hours
+def dsConfigFileFutureCombinations(objectiveID,addMon,non_hour):
+```
+
 
 #### Create single dataset
 ```python
@@ -113,24 +130,3 @@ def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
 #Read dataset into memory
 def readFromFile():
 ```
-
-#### File configuration methodologies
-
-```python
-#Use configuration to create sets of training and test sets
-def dsConfigFile(objectiveID,addMonthBool):
-```
-
-```python
-#Use configuration to create sets of training and test sets with objective class of a specific hour
-def dsConfigFileFutureExactly(objectiveID,addMon,non_hour):
-```
-
-```python
-##Use configuration to create sets of training and test sets with objective class consisting of a range of specific hours
-def dsConfigFileFutureCombinations(objectiveID,addMon,non_hour):
-```
-
-
-
-
