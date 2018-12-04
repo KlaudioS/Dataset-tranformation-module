@@ -11,8 +11,9 @@ API stil under development
 
 # API functions
 
-The API comes with a different set of functions that lets you adjust your Wikipedia datasets to the users needs:
+The API comes with a different set of functions that lets the user models its dataset to its needs:
 
+#### Grid search methodologies
 ```python
 #Create multiple datasets with all possible configurations until max granularity and history
 def dsConfig(maxGranularity,maxHourHistory,objectiveID):
