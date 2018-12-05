@@ -278,7 +278,7 @@ def granularityIndexer(tmpDS,granu):
 
 	return tempDS
 
-#Read dataset into memory
+#Read configuration parameters from file
 def readFromFile():
 	config=[]
 
