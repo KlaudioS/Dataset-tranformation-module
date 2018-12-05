@@ -16,12 +16,12 @@ The API comes with a different set of functions that lets the user models its da
 #### Grid search approach
 ```python
 #Create multiple datasets with all possible configurations until max granularity and history
-def dsConfig(maxGranularity,maxHourHistory,objectiveID):
+def ds_config(maxGranularity,maxHourHistory,objectiveID):
 ```
 
 ```python
 #Create multiple datasets with all possible configurations until max granularity and history with a range of specific future hours for objective class
-def dsCreatorFuture(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
+def ds_creator_future(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
 ```
 
 #### File configuration approach
@@ -45,22 +45,22 @@ def ds_config_file_futureCombinations(objectiveID,addMon,non_hour):
 #### Create single dataset
 ```python
 #Create a single dataset with specific configuration
-def dsCreator(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name):
+def ds_creator(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name):
 ```
 
 ```python
 #Create a single dataset composed by N months
-def addMonths(allDS,monthNumber):
+def add_months(allDS,monthNumber):
 ```
 
 ```python
 #Create a single dataset composed by N months and a future hour for objective class
-def futureDS(allDS,futureTimeWindow,objectiveID,history):
+def future_ds(allDS,futureTimeWindow,objectiveID,history):
 ```
 
 ```python
 #Tranform dataset into N granularity
-def granularityIndexer(tmpDS,granu):
+def granularity_indexer(tmpDS,granu):
 ```
 
 ```python
@@ -71,12 +71,12 @@ def normalization(allDS):
 #### Configuration functions
 ```python
 #Set usable attributes in the dataset
-def createUsableAttList(file,objectiveID):
+def create_usable_att_list(file,objectiveID):
 ```
 
 ```python
 #Delete specific attirbutes
-def deleteMetrics(metrics,tempDS):
+def delete_metrics(metrics,tempDS):
 ```
 
 ```python
@@ -86,47 +86,47 @@ def history(hourHistory,allDS):
 
 ```python
 #Create header for when using history
-def createHistoryHeader(hourHistory,allDS):
+def create_history_header(hourHistory,allDS):
 ```
 
 ```python
 #Create array with all files of the main directory
-def getAllFiles():
+def get_all_files():
 ```
 
 ```python
 #Get all CSV file locations in the main directory
-def getOnlyNames():
+def get_only_names():
 ```
 
 ```python
 #Get only names of all the CSV files in the main directory
-def getFileNames():
+def get_file_names():
 ```
 
 ```python
 #Create a header for future objective class
-def createHistoryHeaderFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
+def create_history_header_future(hourHistory,allDS,futureTimeWindow,objectiveID):
 ```
 
 ```python
 #Create a record with specific history containing the future objective class
-def historyFuture(hourHistory,allDS,futureTimeWindow,objectiveID):
+def history_future(hourHistory,allDS,futureTimeWindow,objectiveID):
 ```
 
 #### Specific tasks
 
 ```python
 #Write a dastaset to a CSV file
-def writeCSV4(tempDataset,monthNum,norm,name):
+def write_CSV4(tempDataset,monthNum,norm,name):
 ```
 
 ```python
 #Write a dastaset with future objective class to a CSV file
-def writeCSVFuture(tempDataset,monthNum,norm,name,futureTimeWindow):
+def write_CSV_future(tempDataset,monthNum,norm,name,futureTimeWindow):
 ```
 
 ```python
 #Read dataset into memory
-def readFromFile():
+def read_from_file():
 ```
