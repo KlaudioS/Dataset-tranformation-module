@@ -127,6 +127,6 @@ def write_CSV_future(tempDataset,monthNum,norm,name,futureTimeWindow):
 ```
 
 ```python
-#Read dataset into memory
+#Read configuration parameters from file
 def read_from_file():
 ```
