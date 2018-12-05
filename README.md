@@ -28,17 +28,17 @@ def dsCreatorFuture(granularity,hourHistory,usableAttributes,norm,originalDatase
 
 ```python
 #Use configuration to create sets of training and test sets
-def dsConfigFile(objectiveID,addMonthBool):
+def ds_config_file(objectiveID,addMonthBool):
 ```
 
 ```python
 #Use configuration to create sets of training and test sets with objective class of a specific hour
-def dsConfigFileFutureExactly(objectiveID,addMon,non_hour):
+def ds_config_file_future_exactly(objectiveID,addMon,non_hour):
 ```
 
 ```python
 ##Use configuration to create sets of training and test sets with objective class consisting of a range of specific hours
-def dsConfigFileFutureCombinations(objectiveID,addMon,non_hour):
+def ds_config_file_futureCombinations(objectiveID,addMon,non_hour):
 ```
 
 
