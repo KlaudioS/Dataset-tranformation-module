@@ -41,7 +41,6 @@ def ds_config_file_future_exactly(objectiveID,addMon,non_hour):
 def ds_config_file_futureCombinations(objectiveID,addMon,non_hour):
 ```
 
-
 #### Create single dataset
 ```python
 #Create a single dataset with specific configuration
@@ -68,12 +67,6 @@ def granularity_indexer(tmpDS,granu):
 def normalization(allDS):
 ```
 
-#### Configuration functions
-```python
-#Set usable attributes in the dataset
-def create_usable_att_list(file,objectiveID):
-```
-
 ```python
 #Delete specific attirbutes
 def delete_metrics(metrics,tempDS):
@@ -82,6 +75,12 @@ def delete_metrics(metrics,tempDS):
 ```python
 #Create history for records
 def history(hourHistory,allDS):
+```
+
+#### Configuration functions
+```python
+#Set usable attributes in the dataset
+def create_usable_att_list(file,objectiveID):
 ```
 
 ```python
