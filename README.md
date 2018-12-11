@@ -13,7 +13,7 @@ API stil under development
 
 The API comes with a different set of functions that lets the user models its dataset to its needs.
 
-#### Grid search approach
+#### Grid search functions
 ```python
 #Create multiple datasets with all possible configurations until max granularity and history
 def ds_config(maxGranularity,maxHourHistory,objectiveID):
@@ -24,7 +24,7 @@ def ds_config(maxGranularity,maxHourHistory,objectiveID):
 def ds_creator_future(granularity,hourHistory,usableAttributes,norm,originalDataset,monthNum,objectiveID,name,futureTimeWindow,non_hour):
 ```
 
-#### File configuration approach
+#### File configuration functions
 
 ```python
 #Use configuration to create sets of training and test sets
